@@ -1,0 +1,43 @@
+/*  
+especificidad:
+    !important ->
+    estilos en linea ->
+    identificadores ->
+    clases->
+    pseudoclases ->
+    atributos ->
+    elementos ->
+    pseudo elementos
+
+
+h2 {
+    color: coral;
+}
+h2 {
+    color: red;
+}
+h2 {
+    color: blue;
+} el ultimo es el que se tomara en cuenta
+*/
+
+.titulo-h2 {    /* clase */
+    color: rgb(148, 17, 17);
+}
+
+#id-uno {   /* tipo id */
+    color: #262ea1;
+}
+
+h2 b {  /* descendiente */
+    color: coral;
+}
+
+.parrafo-uno b{ /* descendiente */
+    color: darkgreen;
+}
+
+button:hover {  /* pseudo-clases */
+    color: darkorchid;
+}
+
