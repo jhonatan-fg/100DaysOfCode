@@ -41,3 +41,23 @@ button:hover {  /* pseudo-clases */
     color: darkorchid;
 }
 
+
+/*------------------------------------------------*/
+/*fonts*/
+
+* {
+    font-family: 'Rajdhani', sans-serif;
+}
+.contact-form {
+    font-size: 10px;
+    background-color: #262ea1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contact-form__h2 {
+    font-size: 2em;
+
+    color: aliceblue;
+    font-weight: 100;
+}
