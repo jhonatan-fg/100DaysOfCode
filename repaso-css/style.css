@@ -51,13 +51,69 @@ button:hover {  /* pseudo-clases */
 .contact-form {
     font-size: 10px;
     background-color: #262ea1;
-    width: 100vw;
-    height: 100vh;
+    width: 90vw;
+    height: 10vh;
 }
 
 .contact-form__h2 {
     font-size: 2em;
-
     color: aliceblue;
     font-weight: 100;
+}
+
+h3 {
+    background-color: orange;
+    display: inline-block;
+    padding:10px 20px 30px 40px;
+    /*
+    padding-bottom: 10px;
+    padding-top: 50px;
+    padding-left: 5px;
+    padding-right: 10px;
+     */
+    height: 200px;
+    width: 200px;
+    box-sizing: content-box;
+    text-align: center;
+    margin: 30px;
+    border-radius: 20px;
+    border: 3px solid blue; 
+    box-shadow: 30px 20px 10px 10px black;
+    /*border: tamaño tipo color;*/
+    text-shadow:2px 2px 7px white;
+    transform: rotate(10deg);
+}
+
+.caja1 {
+    width: 200px;
+    height: 200px;
+    background: blue;
+    font-size: 30px;
+    position: relative;
+    left: 30px;
+}
+
+.caja2 {
+    width: 200px;
+    height: 200px;
+    background: red;
+    font-size: 30px;
+    position: absolute;
+    left: 300px;
+}
+
+.caja3 {
+    width: 200px;
+    height: 200px;
+    background: green;
+    font-size: 30px;
+    top: 500px;
+    left:20px;
+}
+
+.caja4 {
+    width: 200px;
+    height: 200px;
+    background: purple;
+    font-size: 30px;
 }
