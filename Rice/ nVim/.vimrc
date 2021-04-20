@@ -94,6 +94,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Vim Tmux Navigator
 Plug 'christoomey/vim-tmux-navigator'
+"Auto CloseTag
+Plug 'alvan/vim-closetag'
+"Git 
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -118,7 +122,27 @@ set noshowmode
 
 "Sets Lightline Colorscheme
 let g:lightline = {
+    \ 'active': {
+    \ 'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
+    \ 'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+    \},
+    \ 'inactive': {
+    \   'left': [['inactive'], ['relativepath']],
+    \   'right': [['bufnum']]
+    \},
+    \ 'component': {
+    \   'bufnum': '%n',
+    \   'inactive': 'inactive'
+    \},
+    \ 'component_function': {
+    \   'gitbranch': 'fugitive#head',
+    \   'kitestatus': 'kite#statusline'
+    \},
     \ 'colorscheme': 'dracula',
+    \ 'subseparator': {
+    \   'left': '',
+    \   'right': ''
+    \ }
     \}
 
 "Enable Rainbow Brackets
@@ -127,6 +151,9 @@ let g:rainbow_active = 1
 "NerdTree Stuff
 nmap <Leader>nt :NERDTreeFind<CR>
 let NERDTreeQuitOnOpen=1
+let NerdTreeShowLineNumbers=1
+let NerdTreeDirArrows=1
+let NerdTreeMinimalUI=1
 
 "Goyo (Relax Mode) Toggle
 map <Leader>gy :Goyo<CR>
@@ -137,4 +164,39 @@ let g:AutoPairsMapCR = 0
 "Identline stuff
 map <Leader>le :IndentLinesEnable<CR>
 map <leader>ld :IndentLinesDisable<CR>
+
+"Auto closetag 
+"HTML, JSX
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
+
+"COC
+"Stuff
+autocmd FileType javascript let b:coc_suggest_disable = 1
+autocmd FileType python let b:coc_suggest_disable = 1
+autocmd FileType ruby let b:coc_suggest_disable = 1
+autocmd FileType html let b:coc_suggest_disable = 1
+autocmd FileType css let b:coc_suggest_disable = 1
+autocmd FileType typescript let b:coc_suggest_disable = 1
+autocmd FileType c++ let b:coc_suggest_disable = 1
+autocmd FileType scss setl iskeyword+=@-@
+"Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+"kite
+let g:kite_supported_languages = ['javascript', 'python', 'ruby', 'html', 'css', 'typescript', 'cpp']
+
+"Git stuff
+nnoremap <Leader>G :G<CR>
+nnoremap <Leader>gp :Gpush<CR>
+nnoremap <Leader>gl :Gpull<CR>
+
+"Use <c-space> to trigger completition.
+if &filetype == "javascript" || &filetype == "python" || &filetype == "html" || &filetype == "css" || &filetype == "ruby" || &filetype == "typescript" || &filetype "cpp"
+    inoremap <c-space> <C-x><C-u>
+else
+    inoremap <silent><expr> <c-space> coc#refresh()
+endif
 
