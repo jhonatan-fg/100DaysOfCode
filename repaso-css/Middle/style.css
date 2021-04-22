@@ -56,3 +56,77 @@
   width: 200px;
   margin-right: 20px;
 }
+
+.texto {
+  padding: 20px;
+}
+
+.texto::first-line /*first-letter*/ {
+  color: blue;
+  font-size: 2em;
+}
+
+form {
+  margin: 100px auto;
+  display: block;
+  background: #555;
+  padding: 100px;
+  width: 50%;
+}
+
+
+/*pseudoelementos*/
+input {
+  padding: 6px;
+  width: 100%;
+}
+
+input::placeholder {
+  color: red;
+  background: yellow;
+}
+
+input::selection {
+  color: yellow;
+  background: red;
+}
+
+b {
+  padding: 10px;
+  width: 100%;
+}
+
+b::before {
+  content: 'a todos';
+}
+
+b::after {
+  content: 'esto es after y before';
+}
+
+/*pseudoclases*/
+.caja1 {
+  height: 200px;
+  width: 200px;
+  background: slateblue;
+}
+
+.caja1:hover {
+  background: darkslateblue;
+  height: 300px;
+  width: 300px;
+}
+
+.caja2 {
+  margin: 30px;
+  display: block;
+  background: black;
+}
+
+.caja2:link {
+  color: darkred;
+}
+
+.caja2:visited {
+  color: pink;
+}
