@@ -96,6 +96,7 @@ b {
   width: 100%;
 }
 
+/*before and after
 b::before {
   content: 'a todos';
 }
@@ -103,6 +104,7 @@ b::before {
 b::after {
   content: 'esto es after y before';
 }
+*/
 
 /*pseudoclases*/
 .caja1 {
@@ -113,8 +115,8 @@ b::after {
 
 .caja1:hover {
   background: darkslateblue;
-  height: 300px;
-  width: 300px;
+  height: 230px;
+  width: 230px;
 }
 
 .caja2 {
@@ -132,5 +134,62 @@ b::after {
 }
 
 .caja3 {
-  color: violet;
+  background: violet;
+  width: 300px;
+  height: 300px;
+  margin: 25px;
+  transition: all 1s;
+}
+
+.caja3:active {
+  background: darkslateblue;
+  width: 600px;
+}
+
+.caja4 {
+  width: 300px;
+  margin: 25px;
+  transition: padding 1s, background 1s;
+}
+
+.caja4:focus {
+  background: blue;
+  padding: 25px;
+}
+
+.caja5 {
+  margin: 25px;
+}
+
+.caja5 b:lang(es) {
+  background: red;
+  padding: 20px;
+}
+
+.caja6 {
+  margin: 25px;
+  width: 400px;
+  height: 200px;
+}
+
+.caja6 img {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+  object-fit: scale-down;
+  /*contain,cover,none,scale-down*/
+  object-position:right;
+}
+
+.caja7 {
+  margin: 40px;
+  width: 400px;
+  height: 200px;
+  border: 5px solid red;
+  background: salmon;
+  cursor: pointer;
+}
+
+.caja7:active {
+  cursor: progress;
 }
