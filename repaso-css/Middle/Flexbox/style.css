@@ -24,6 +24,14 @@
   margin: 5px;
   height: 120px;
   min-width:120px;
+  /*
+   aling-self: center;
+   flex-grow: 1;
+   flex-basis: 200px;
+   flex: shrink: ;
+   flex: flex-grow flex-basis flex-shrink;
+   order: 3;
+    */
 }
 
 .orange {
@@ -32,4 +40,93 @@
 
 .green {
   background: green;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #bec0c5;
+  margin: 50px 50px;
+  padding: 20;
+  border: 20px solid #bec0c5;
+  outline: 4px solid #b0647b;
+}
+
+.form {
+  min-width: 400px;
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+  order: 5;
+}
+
+.form__input {
+  width: 100%;
+  padding: 7px;
+  margin: 6px 0;
+  border: none;
+  border-bottom: 5px solid #b0647b;
+  background: transparent;
+  color: #333;
+}
+
+.form__input:focus {
+  background: linear-gradient(to bottom, #bec0c5, #9099A0);
+  outline: none;
+  border-bottom: 5px solid #f13df4;
+}
+
+.form textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+.form-img{
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  min-width: 500px;
+  max-width: 500px;
+  order: 1;
+}
+
+.img-container {
+  margin: auto;
+}
+
+.form-img div {
+  padding: 10px;
+}
+
+.img-container div {
+  border-radius: 50%;
+  text-align: center;
+  padding: 40px;
+
+}
+
+.form-img img {
+  width: 80%;
+}
+
+.form input[type="submit"] {
+  background: #b0647b;
+  border-bottom: none;
+  padding: 12px;
+}
+
+.form input[type="submit"]:hover {
+  background: #f13df4;
+  border-bottom: none;
+  padding: 12px;
+}
+
+.form input[type="submit"]:focus {
+  background: #b0647b;
+}
+
+.form input[type="submit"]:active {
+  background: linear-gradient(to bottom, #b0647b,#f13df4)
 }
