@@ -6,8 +6,16 @@
 
 .flex-container {
   display: flex; 
-  flex-direction: column;
   /*row,column,*/
+  /*flex-flow:column wrap;*/
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /*align-item: center;
+   baseline, stretch,flex-start,flex-end
+   align-content: ;*/
+
 }
 
 .flex-item {
@@ -15,5 +23,13 @@
   color: white;
   margin: 5px;
   height: 120px;
-  width: 120px;
+  min-width:120px;
+}
+
+.orange {
+  background: orange;
+}
+
+.green {
+  background: green;
 }
