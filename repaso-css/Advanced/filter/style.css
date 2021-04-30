@@ -4,22 +4,31 @@
   font-size: 20px;
 }
 
-:root {
-  --color-rojo: #f34;
-  --color-azul: #66f;
-}
-
-div {
-  padding: 30px;
-  height: 150px;
-  width: 150px;
-  margin: 30px;
-}
-
 .container {
-  background: var(--color-rojo);
+  filter: contrast(30);
+  background: #fff;
 }
 
-.container-2 {
-  background: var(--color-azul);
+.caja {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: red;
+  margin: 40px;
+  border-radius: 50%;
+  filter: blur(20px);
+
+}
+
+.caja:first-child { 
+  animation: trasladar 3s alternate infinite;
+}
+
+@keyframes trasladar{
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(160px)
+  }
 }
