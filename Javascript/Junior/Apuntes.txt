@@ -1,0 +1,33 @@
+variables:
+    const, var, let
+    tipos de datos: string(cadena de texto), number, boolean
+    casos especiales de datos: undefined, null, nan(not a number)
+    scope: alcance de las variables
+    hoisting
+operadores de asignacion
+operadores aritmeticos
+concatenacion
+    signo +
+    numeros ("" + num + num1)
+    concat.num(num)
+    `hola ${nombre} como estas`
+backticks
+operadores
+    operadores logicos
+        && and
+        || or
+        ! not
+    operadores de comparaion
+        equality (a==b)
+        inequality (a! = b)
+        identity (a===b)
+        non-identity (a ! ==b)
+        greater than (a > b)
+        greater than or equal (a >= b)
+        less than(a < b)
+        less than or equal (a <= b)
+camel case
+condicionales
+    if
+    else if
+    else
