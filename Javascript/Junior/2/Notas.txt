@@ -11,4 +11,22 @@ array asociativo
         espacio: "128gb"
     }
 
-    document.write("procesador")
+    document.write(pc["procesador"])
+
+bucles
+    sentencia while
+    sentencia do while
+    sentencia break
+
+    sentencia for
+        for (variable; condicion; i++ o i--){
+            accion
+        }
+    sentencia continue
+    sentencia for in muestra posicion
+    sentencia for of muestra valor
+-------------------------
+    sentencia label
+funciones
+    
+    
