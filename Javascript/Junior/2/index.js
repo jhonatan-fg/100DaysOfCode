@@ -80,7 +80,41 @@ function saludar(){
     } else {
         alert("una pena")
     }
-
-saludar()
 }
 
+//saludar()
+
+saludar1 = function(){
+    respuesta = prompt("!hola dany1! como fue tu dia?")
+    if (respuesta == "bien") {
+        alert("me alegro")
+    } else {
+        alert("una pena")
+    }
+}
+
+//saludar1()
+
+function saludar(){
+    //alert("hola")
+    return "todo okay"
+}
+
+let saludo = saludar();
+
+//document.write(saludo)
+
+function suma(num1,num2){
+    let res = num1 + num2;
+    return res
+}
+
+let resultado = suma(12,32)
+//document.write(resultado)
+
+const saludarN = (nombre) => {
+    let frase = `!hola ${nombre}! ¿como estas? `
+    document.write(frase)
+}
+
+saludarN("jhony")
