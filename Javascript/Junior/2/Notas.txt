@@ -1,0 +1,14 @@
+array
+    frutas = ["banana","manzana","pera"]
+
+document.write(); escribir en pantalla
+
+array asociativo
+    let pc = {
+        nombre: "macbook air",
+        procesador: "intel i5",
+        ram: "4gb",
+        espacio: "128gb"
+    }
+
+    document.write("procesador")
