@@ -72,7 +72,7 @@ for (let array in array2) {
 */
 
 /*-----------------------FUNCIONES-------------------*/
-
+/*
 function saludar(){
     respuesta = prompt("!hola dany! como fue tu dia?")
     if (respuesta == "bien") {
@@ -118,6 +118,104 @@ const saludarN = (nombre) => {
 }
 
 saludarN("jhony")
+*/
 
-
+/*
 let free = false;
+
+const validarCliente = (time)=>{
+    let edad = prompt("¿cual es tu edad?")
+    if (edad > 18) {
+        if (time >= 2 && time < 7 && free == false) {
+            alert("podes pasar gratis sos mayor de edad")
+            free = true;
+    } else {
+        alert(`son las ${time}:00hrs podes pasar, pero tenes que pagar la entrada`) 
+    }} else {
+        alert("eres menor de edad")
+    }
+}
+
+
+validarCliente(23)
+validarCliente(24)
+validarCliente(0.2)
+validarCliente(0.6)
+validarCliente(2)
+validarCliente(2.4)
+validarCliente(3)
+*/
+
+/*
+let cantidad = prompt("cuantos alumnos son?")
+let alumnosTotales = []
+
+for (i = 0; i < cantidad; i++) {
+    alumnosTotales[i] = [prompt("Nombre del alumno" + (i+1)),0]
+}
+
+const tomarLista = (nombre,p)=>{
+    let presencia = prompt(nombre)
+    if (presencia == "p" || presencia == "P") {
+        alumnosTotales[p][1]++
+    }
+}
+
+for (i=0; i<30; i++) {
+    for (alumno in alumnosTotales) {
+        tomarLista(alumnosTotales[alumno][0],alumno)
+    }
+}
+
+for (alumno in alumnosTotales) {
+    let resultado = `${alumnosTotales[alumno][0]}:<br>
+    ______Presentes: ${alumnosTotales[alumno][1]}<br>
+    ______Ausencias: ${30 - alumnosTotales[alumno][1]}
+        `
+    if (30 - alumnosTotales[alumno][1] > 18) {
+        resultado+= "<b style='color:red'>Reprobado por inasistencias</b><br><br>"
+    } else {
+    resultado+= "<br><br>"
+    } document.write(resultado)
+}
+*/
+
+const sumar = (num1,num2) => {
+    return parseInt(num1) + parseInt(num2)
+}
+const restar = (num1,num2) => {
+    return parseInt(num1) - parseInt(num2)
+}
+const dividir = (num1,num2) => {
+    return parseInt(num1) / parseInt(num2)
+}
+const multiplicar = (num1,num2) => {
+    return parseInt(num1) * parseInt(num2)
+}
+
+alert("que operacion deseas realizar?")
+operacion = prompt("1: suma, 2: resta, 3: division, 4: multiplicaion")
+
+if (operacion == 1) {
+    let numero1 = prompt("primer numero para sumar")
+    let numero2 = prompt("segundo numero")
+    resultado = sumar(numero1,numero2)
+    alert(`tu resultado es ${resultado}`)
+} else if (operacion == 2) {
+    let numero1 = prompt("primer numero para restar")
+    let numero2 = prompt("segundo numero para restar")
+    resultado = restar(numero1,numero2)
+    alert(`tu resultado es ${resultado}`)
+} else if (operacion == 3) {
+    let numero1 = prompt("primer numero para dividir")
+    let numero2 = prompt("segundo numero para dividir")
+    resultado = dividir(numero1,numero2)
+    alert(`tu resultado es ${resultado}`)
+} else if (operacion == 4) {
+    let numero1 = prompt("primer numero para multiplicar")
+    let numero2 = prompt("segundo numero para multiplicar")
+    resultado = multiplicar(numero1,numero2)
+    alert(`tu resultado es ${resultado}`)
+} else {
+    alert("operacion invalida")
+}
