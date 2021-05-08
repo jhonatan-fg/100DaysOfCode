@@ -29,5 +29,6 @@ bucles
     sentencia label
 funciones
     return
-
+    scope
+    arrow function
     
